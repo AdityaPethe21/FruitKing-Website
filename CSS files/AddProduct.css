@@ -1,0 +1,63 @@
+﻿.DivProd {
+    margin-left: 20px;
+    margin: 20px;
+}
+
+.AddproductFields{
+    border:1px solid red;
+    margin-inline:auto;
+}
+
+h2{
+    text-align:center;
+}
+
+input[type=text]{
+    width:250px;
+    height:30px;
+    overflow:scroll;
+    padding-left:20px;
+    border-radius:25px;
+
+
+}
+
+.DropDown {
+    width: 250px;
+    height: 30px;
+    overflow: scroll;
+    padding-inline: 20px;
+    border-radius: 25px;
+}
+
+.MultiLine {
+    width: 250px;
+    height: 100px;
+    overflow: scroll;
+}
+
+.btn {
+    border: none;
+    font-size: 20px;
+    border-radius: 0.4rem;
+    padding: 10px 18px;
+    background-color: #e23d3d;
+    color: #fafafa;
+    outline: 0;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    transition: all 0.2s;
+    margin: 10px;
+    text-align: center;
+   
+    margin-left: 100px;
+    
+}
+
+    .btn:hover {
+        background-color: #f84848;
+        cursor: pointer;
+    }
+
+    .btn:active {
+        transform: scale(0.9);
+    }

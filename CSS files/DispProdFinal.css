@@ -1,0 +1,34 @@
+﻿
+.section-heading-varities {
+    padding: 3rem 0;
+   
+}
+
+.sec-content-div-varities {
+    font-size: 1rem;
+}
+
+
+
+.tile-varities {
+    
+    height: max-content;
+    width:200px;
+    
+}
+
+@media (max-width: 680px) {
+    .tile-varities {
+        width: max-content;
+        max-width: 100%;
+        min-width: 200px;
+        margin: 1.5rem auto;
+        height: auto;
+    }
+}
+
+
+.tile-varities-font{
+    font-size: 1rem;
+}
+
