@@ -1,0 +1,185 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="User.master.cs" Inherits="User" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>UserMaster</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="CSS/FINAL.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function myfunction() {
+        $("#cart").click(function myfunction() {
+            window.location.href = "Cart.aspx";
+        });
+    });
+
+</script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="margin:0;padding:0;">
+    <form id="form1" runat="server">
+        <div>
+            <%-- Header --%>
+          
+            <header id="header">
+                <div class="header-content-div">
+                    <a href="Default.aspx">
+                        <img
+                            src="Images/Juice.png"
+                            alt="Company Logo"
+                            id="header-img" />
+                    </a>
+
+                    <nav id="nav-bar">
+                        <a href="Home.aspx" class="nav-link">HOME</a>
+                        <a href="about.aspx" class="nav-link">ABOUT</a>
+                        <a href="DisplayProduct.aspx" class="nav-link">PRODUCTS</a>
+                        <a href="Service.aspx" class="nav-link">SERVICES</a>
+                        <a href="Benefits.aspx" class="nav-link">BENEFITS</a>
+                        <a class="nav-link">
+                            <button type="button" id="cart" style="background-color: transparent; border: none;">
+                                CART
+                                <span id="pcount" runat="server" style="background-color: palegreen; border-radius: 50%; padding: 4px 8px; margin-left: 5px;"></span>
+                            </button>
+                        </a>
+                        <a class="nav-link">
+                            <asp:Button ID="LogIn" CssClass="nav-link"  runat="server" Text="LOGIN" OnClick="LogIn_Click"></asp:Button>
+                            <asp:Button ID="LogOut" CssClass="nav-link" runat="server" Text="LOGOUT" OnClick="LogOut_Click" Style="padding: 1px"></asp:Button>
+                        </a>
+
+                    </nav>
+                </div>
+            </header>
+
+             <%-- Header --%>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+
+            <%--Footer--%>
+                <section class="sec-padding" id="contact">
+        <h3 class="section-heading">CONTACT</h3>
+        <div class="sec-content-div flexible ">
+            <h6>To make an order or just to know more contact us.........</h6>
+           
+        </div>
+        <hr style="height: 1px; margin-bottom: 5px" />
+        <div class="contact-icon-container">
+            <div>
+                <img class="contact-icon" src="/Images/whatsapps.png" alt="" />
+                <label class="contact-icon-text">+91 866831109</label>
+            </div>
+            <div>
+                <img class="contact-icon" src="/Images/gmail.png" alt="" />
+                <label class="contact-icon-text">fruitking@gmail.com</label>
+            </div>
+        </div>
+
+
+        <div class="follow-icontext-container">
+            <p class="follow-text">Follow us on</p>
+            <div class="follow-icon-container">
+                <img class="follow-icon" src="/Images/instagrams.png" alt="" />
+                <img class="follow-icon" src="/Images/facebook.png" alt="" />
+                <img class="follow-icon" src="/Images/linkin.png" alt="" />
+                <img class="follow-icon" src="/Images/twitter.png" alt="" />
+            </div>
+        </div>
+
+        <hr style="height: 1px; margin-top: 25px; margin-bottom: 5px" />
+        <div class="copyright">
+            Copyright@2023 - Fruit King. All rights reserved.
+        </div>
+    </section>
+
+</main>
+
+<%--            <footer>
+                <div class="footer-item-container">
+                    <div class="footer-item">
+                        <h4>Home</h4>
+                        <ul class="footer-list-container">
+                            <li class="footer-home-item">Home</li>
+                            <li class="footer-home-item">Service</li>
+                            <li class="footer-home-item">Features</li>
+                            <li class="footer-home-item">Cart</li>
+                            <li class="footer-home-item">About</li>
+                        </ul>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Service</h4>
+                        <ul class="footer-list-container">
+                            <li class="footer-home-item">Home</li>
+                            <li class="footer-home-item">Service</li>
+                            <li class="footer-home-item">Features</li>
+                            <li class="footer-home-item">Cart</li>
+                            <li class="footer-home-item">About</li>
+                        </ul>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Store Location</h4>
+                        <ul class="footer-list-container">
+                            <li class="footer-home-item">Home</li>
+                            <li class="footer-home-item">Service</li>
+                            <li class="footer-home-item">Features</li>
+                            <li class="footer-home-item">Cart</li>
+                            <li class="footer-home-item">About</li>
+                        </ul>
+                    </div>
+                    <div class="footer-item">
+                        <h4>Products</h4>
+                        <ul class="footer-list-container">
+                            <li class="footer-home-item">Home</li>
+                            <li class="footer-home-item">Service</li>
+                            <li class="footer-home-item">Features</li>
+                            <li class="footer-home-item">Cart</li>
+                            <li class="footer-home-item">About</li>
+                        </ul>
+                    </div>
+                </div>
+                <hr style="height: 1px; margin-top: 20px" />
+
+                <div class="contact-icontext-container">
+                    <p class="contact-text">Contact us on</p>
+
+                    <div class="contact-icon-container">
+                        <div>
+                            <img class="contact-icon" src="/Images/whatsapps.png" alt="" />
+                            <label class="contact-icon-text">+91 866831109</label>
+                        </div>
+                        <div>
+                            <img class="contact-icon" src="/Images/gmail.png" alt="" />
+                            <label class="contact-icon-text">fruitking@gmail.com</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="follow-icontext-container">
+                    <p class="follow-text">Follow us on</p>
+                    <div class="follow-icon-container">
+                        <img class="follow-icon" src="/Images/instagrams.png" alt="" />
+                        <img class="follow-icon" src="/Images/facebook.png" alt="" />
+                        <img class="follow-icon" src="/Images/linkin.png" alt="" />
+                        <img class="follow-icon" src="/Images/twitter.png" alt="" />
+                    </div>
+                </div>
+
+                <hr style="height: 1px; margin-top: 25px; margin-bottom: 5px" />
+                <div class="copyright">
+                    Copyright@2023 - Fruit King. All rights reserved.
+                </div>
+            </footer>
+--%>
+            <%--Footer--%>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,69 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>MyAdmin</title>
+    <link href="CSS/FINAL.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        
+#AdminLogOut {
+    border: 1px solid blue;
+    background-color: transparent;
+    border: none;
+}
+
+    #AdminLogOut:hover {
+        
+        border-bottom: none;
+    }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+           
+
+
+            <%-- Header --%>
+
+            <header id="header">
+                <div class="header-content-div">
+                    <a href="Default.aspx">
+                        <img
+                            src="Images/Juice.png"
+                            alt="Company Logo"
+                            id="header-img" />
+                    </a>
+
+                    <nav id="nav-bar">
+                        <a href="#" class="nav-link">ABOUT</a>
+                        <a href="DisplayProduct.aspx" class="nav-link">PRODUCTS</a>
+                        <a href="#our-service" class="nav-link">SERVICES</a>
+                        <a href="#benefits" class="nav-link">BENEFITS</a>
+                        <a href="AddProduct.aspx" class="nav-link">ADD PRODUCTS</a>
+                        <a class="nav-link">
+                            <asp:Button ID="AdminLogOut" runat="server" Text="LOGOUT" OnClick="AdminLogOut_Click"></asp:Button>
+                        </a>
+
+                    </nav>
+                </div>
+            </header>
+
+            <%-- Header --%>
+
+
+            <br />
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+        </div>
+    </form>
+
+
+</body>
+</html>
